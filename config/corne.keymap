@@ -52,10 +52,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6          &kp N7  &kp N8     &kp N9         &kp N0   &none
-&none  &kp TAB   &none   &none   &none   &none      &kp LEFT        &kp DOWN  &kp UP  &kp RIGHT  &kp BACKSPACE  &trans
-&none  &kp ESC  &trans  &trans  &trans  &trans    &kp DELETE          &trans  &trans     &trans         &trans  &trans
-                         &mo 3  &trans   &none         &none  &kp LEFT_SHIFT   &none
+&none   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5           &kp N6          &kp N7    &kp N8        &kp N9     &kp N0   &none
+&none  &kp TAB   &none   &none   &none   &none    &kp BACKSPACE        &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&none  &kp ESC  &trans  &trans  &trans  &trans       &kp DELETE          &trans    &trans        &trans     &trans  &trans
+                         &mo 3  &trans   &none            &none  &kp LEFT_SHIFT     &none
             >;
         };
 
@@ -77,7 +77,7 @@
         Layer__3 {
             bindings = <
 &trans     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5    &kp F6  &kp F7  &kp F8   &kp F9  &kp F10  &trans
-&trans     &trans     &trans     &trans     &trans     &trans    &trans  &trans  &trans  &kp F11  &kp F12  &trans
+&trans     &trans  &kp LC(S)     &trans     &trans     &trans    &trans  &trans  &trans  &kp F11  &kp F12  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(X)  &kp LC(C)  &kp LC(V)    &trans  &trans  &trans   &trans   &trans  &trans
                                  &trans     &trans     &trans    &trans   &mo 4  &trans
             >;
@@ -89,6 +89,15 @@
 &trans         &none        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+        };
+
+        Layer__5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
