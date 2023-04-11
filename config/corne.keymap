@@ -37,10 +37,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD  &kp P      &kp Y      &kp F           &kp G          &kp C  &kp R  &kp L  &none
-&none             &kp A      &kp O       &kp E  &kp U      &kp I      &kp D           &kp H          &kp T  &kp N  &kp S  &none
-&none         &kp LCTRL      &kp Q       &kp J  &kp K      &kp X      &kp B           &kp M          &kp W  &kp V  &kp Z  &none
-                                         &mo 2  &mo 1  &kp SPACE    &kp RET  &kp LEFT_SHIFT  &kp BACKSPACE
+&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD           &kp P      &kp Y      &kp F  &kp G  &kp C  &kp R  &kp L  &none
+&none             &kp A      &kp O       &kp E           &kp U      &kp I      &kp D  &kp H  &kp T  &kp N  &kp S  &none
+&none     &kp SEMICOLON      &kp Q       &kp J           &kp K      &kp X      &kp B  &kp M  &kp W  &kp V  &kp Z  &none
+                                         &mo 2  &kp LEFT_SHIFT  &kp SPACE    &kp RET  &mo 1  &mo 3
             >;
         };
 
@@ -89,6 +89,15 @@
 &trans         &none        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
                                           &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans   &trans       &trans   &trans      &kp LS(F5)  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp LS(F11)  &kp F10          &kp F5  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans       &trans   &trans  &kp LS(LC(F5))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                               &trans          &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
