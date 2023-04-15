@@ -35,11 +35,6 @@
     };
 
     behaviors {
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR";
-            #binding-cells = <0>;
-        };
     };
 
     keymap {
