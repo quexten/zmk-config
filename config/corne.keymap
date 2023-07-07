@@ -50,8 +50,8 @@
 
             bindings = <
 &none   &kp N1  &kp N2  &kp N3            &kp N4        &kp N5           &kp N6          &kp N7    &kp N8        &kp N9     &kp N0   &none
-&none  &kp TAB   &none   &none             &none        &tog 3    &kp BACKSPACE        &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-&none  &kp ESC  &trans  &trans  &kp C_PLAY_PAUSE  &kp LEFT_WIN       &kp DELETE          &trans    &trans        &trans     &trans  &trans
+&none  &kp TAB   &none   &none             &none         &none    &kp BACKSPACE        &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&none  &kp ESC  &trans  &trans  &kp C_PLAY_PAUSE  &kp LEFT_WIN       &kp DELETE          &tog 3    &trans        &trans     &trans  &trans
                         &trans            &trans         &none            &none  &kp LEFT_SHIFT     &none
             >;
         };
