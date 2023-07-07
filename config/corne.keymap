@@ -9,20 +9,6 @@
 
 / {
     macros {
-        Copy: Copy {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(C)>;
-        };
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            label = "new_macroa";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp A>;
-        };
     };
 
     combos {
@@ -48,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD           &kp P      &kp Y      &kp F  &kp G      &kp C  &kp R  &kp L  &none
-&none             &kp A      &kp O       &kp E           &kp U      &kp I      &kp D  &kp H      &kp T  &kp N  &kp S  &none
-&none     &kp SEMICOLON      &kp Q       &kp J           &kp K      &kp X      &kp B  &kp M      &kp W  &kp V  &kp Z  &none
-                                         &mo 2  &kp LEFT_SHIFT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
+&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD         &kp P      &kp Y      &kp F  &kp G      &kp C  &kp R  &kp L  &none
+&none             &kp A      &kp O       &kp E         &kp U      &kp I      &kp D  &kp H      &kp T  &kp N  &kp S  &none
+&none    &kp LEFT_SHIFT      &kp Q       &kp J         &kp K      &kp X      &kp B  &kp M      &kp W  &kp V  &kp Z  &none
+                                         &mo 2  &kp LEFT_ALT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
             >;
         };
 
@@ -78,10 +64,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none   &kp EXCL  &kp AT  &kp HASH   &kp DLLR     &kp PRCNT    &kp CARET   &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &none
-&none  &kp TILDE  &trans    &trans  &kp SLASH  &kp QUESTION    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &none
-&none  &kp GRAVE  &trans    &trans     &trans        &trans    &kp UNDER   &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &none
-                             &none     &trans         &none        &none     &trans     &none
+&none       &kp EXCL     &kp AT  &kp HASH   &kp DLLR     &kp PRCNT    &kp CARET   &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &none
+&none      &kp TILDE  &kp GRAVE    &trans  &kp SLASH  &kp QUESTION    &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &none
+&none  &kp SEMICOLON  &kp COLON    &trans     &trans        &trans    &kp UNDER   &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &none
+                                    &none     &trans         &none        &none     &trans     &none
             >;
         };
 
