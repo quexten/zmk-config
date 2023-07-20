@@ -35,10 +35,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD         &kp P      &kp Y      &kp F  &kp G      &kp C  &kp R  &kp L  &none
-&none             &kp A      &kp O       &kp E         &kp U      &kp I      &kp D  &kp H      &kp T  &kp N  &kp S  &none
-&none    &kp LEFT_SHIFT      &kp Q       &kp J         &kp K      &kp X      &kp B  &kp M      &kp W  &kp V  &kp Z  &none
-                                         &mo 2  &kp LEFT_ALT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
+&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD       &kp P      &kp Y      &kp F  &kp G      &kp C  &kp R  &kp L  &none
+&none             &kp A      &kp O       &kp E       &kp U      &kp I      &kp D  &kp H      &kp T  &kp N  &kp S  &none
+&none      &kp LEFT_ALT      &kp Q       &kp J       &kp K      &kp X      &kp B  &kp M      &kp W  &kp V  &kp Z  &none
+                                         &mo 2  &kp LSHIFT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
             >;
         };
 
@@ -75,8 +75,8 @@
         layer_5 {
             bindings = <
 &trans   &trans       &trans   &trans      &kp LS(F5)  &trans      &bt BT_CLR        &trans        &trans        &trans        &trans  &trans
-&trans  &kp F11  &kp LS(F11)  &kp F10          &kp F5  &tog 3    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans   &trans       &trans   &trans  &kp LS(LC(F5))  &trans          &trans        &trans        &trans        &trans        &trans  &trans
+&trans  &kp F11  &kp LS(F11)  &kp F10          &kp F5  &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans   &trans       &trans   &trans  &kp LS(LC(F5))  &trans          &trans        &tog 3        &trans        &trans        &trans  &trans
                                &trans          &trans  &trans          &trans        &trans        &trans
             >;
         };
