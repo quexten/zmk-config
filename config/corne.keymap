@@ -16,8 +16,8 @@
         compatible = "zmk,combos";
 
         new_combo {
-            bindings = <&trans>;
-            key-positions = <>;
+            bindings = <&mo 7>;
+            key-positions = <37 40 25>;
         };
     };
 
@@ -38,7 +38,7 @@
 &none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD  &kp P       &kp Y        &kp F    &kp G  &kp C      &kp R  &kp L  &none
 &none  &kp A             &kp O      &kp E       &kp U       &kp I        &kp D    &kp H  &kp T      &kp N  &kp S  &none
 &none  &mo 4             &kp Q      &kp J       &kp K       &kp X        &kp B    &kp M  &kp W      &kp V  &kp Z  &none
-                                    &mo 2       &kp LSHIFT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
+                                    &mo 3       &kp LSHIFT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
             >;
         };
 
@@ -50,10 +50,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp N1   &kp N2  &kp N3  &kp N4            &kp N5           &kp N6         &kp N7          &kp N8    &kp N9        &kp N0     &none
-&none  &kp TAB  &none   &none   &kp K_BACK        &kp K_FORWARD    &kp BACKSPACE  &kp LEFT        &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-&none  &kp ESC  &trans  &trans  &kp C_PLAY_PAUSE  &kp LEFT_WIN     &kp DELETE     &tog 3          &trans    &trans        &trans     &trans
-                        &trans  &trans            &none            &none          &kp LEFT_SHIFT  &none
+&none  &none    &none      &none         &none         &none    &none          &none           &none     &none         &none      &none
+&none  &kp TAB  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none    &kp BACKSPACE  &kp LEFT        &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none
+&none  &kp ESC  &none      &none         &mo 2         &none    &none          &kp DELETE      &none     &none         &none      &none
+                           &none         &none         &none    &none          &kp LEFT_SHIFT  &none
+            >;
+        };
+
+        navigation_upper {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans         &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_BACK  &kp PAGE_DOWN  &kp PG_UP  &kp K_FORWARD  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans         &trans     &trans         &trans
+                        &trans  &trans  &trans    &trans  &trans      &trans
             >;
         };
 
@@ -69,15 +78,6 @@
 &none  &kp TILDE      &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp BSLH  &none
 &none  &kp SEMICOLON  &kp COLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE       &kp UNDER  &kp PLUS        &kp SEMI         &kp PIPE   &none     &none
                                  &trans                &trans                 &trans          &trans     &trans          &trans
-            >;
-        };
-
-        management {
-            bindings = <
-&trans  &trans   &trans       &trans   &kp LS(F5)      &trans    &bt BT_CLR    &trans        &trans        &trans        &trans        &trans
-&trans  &kp F11  &kp LS(F11)  &kp F10  &kp F5          &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans  &trans   &trans       &trans   &kp LS(LC(F5))  &trans    &trans        &tog 3        &trans        &trans        &trans        &trans
-                              &trans   &trans          &trans    &trans        &trans        &trans
             >;
         };
 
@@ -105,6 +105,15 @@
 &trans  &kp LC(F2)  &trans        &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans        &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                   &trans  &trans        &trans    &trans  &trans  &trans
+            >;
+        };
+
+        management {
+            bindings = <
+&trans  &trans  &trans  &trans  &none   &trans    &bt BT_CLR    &trans        &trans        &trans        &trans        &trans
+&trans  &none   &none   &none   &none   &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans  &trans  &trans  &trans  &none   &trans    &trans        &none         &trans        &trans        &trans        &trans
+                        &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
     };
