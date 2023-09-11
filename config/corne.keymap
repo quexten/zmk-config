@@ -15,11 +15,6 @@
     combos {
         compatible = "zmk,combos";
 
-        new_combo {
-            bindings = <&mo 8>;
-            key-positions = <37 40 25>;
-        };
-
         debugging {
             bindings = <&mo 3>;
             key-positions = <37 40>;
@@ -55,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none    &none      &none         &none         &none    &none          &none           &none     &none         &none      &none
-&none  &kp TAB  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none    &kp BACKSPACE  &kp LEFT        &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none
-&none  &kp ESC  &none      &none         &mo 2         &none    &none          &kp DELETE      &none     &none         &none      &none
-                           &none         &trans        &none    &none          &kp LEFT_SHIFT  &none
+&none  &none    &none      &none         &none         &none    &none          &none       &none     &none         &none      &none
+&none  &kp TAB  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none    &kp BACKSPACE  &kp LEFT    &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none
+&none  &kp ESC  &none      &none         &mo 2         &none    &none          &kp DELETE  &none     &none         &none      &none
+                           &mo 8         &trans        &none    &none          &trans      &none
             >;
         };
 
@@ -91,7 +86,7 @@
 &none  &kp EXCL       &kp AT     &kp HASH              &kp DLLR               &kp PRCNT       &kp CARET  &kp AMPS        &kp STAR         &none      &none     &none
 &none  &kp TILDE      &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp BSLH  &none
 &none  &kp SEMICOLON  &kp COLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE       &kp UNDER  &kp PLUS        &kp SEMI         &kp PIPE   &none     &none
-                                 &trans                &trans                 &trans          &trans     &trans          &trans
+                                 &trans                &trans                 &trans          &trans     &mo 8           &trans
             >;
         };
 
@@ -116,7 +111,7 @@
         gaming_upper {
             bindings = <
 &trans  &kp LC(F1)  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &kp N4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(F2)  &trans        &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(F2)  &trans        &trans  &tog 6        &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans        &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                   &trans  &trans        &trans    &trans  &trans  &trans
             >;
@@ -124,10 +119,10 @@
 
         management {
             bindings = <
-&none  &none   &none  &none  &none  &none    &bt BT_CLR    &none         &none         &none         &none         &none
-&none  &tog 6  &none  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &none   &none  &none  &none  &none    &none         &none         &none         &none         &none         &none
-                      &none  &none  &none    &none         &none         &none
+&none  &none  &none  &none  &none   &none    &bt BT_CLR    &none         &none         &none         &none         &none
+&none  &none  &none  &none  &tog 6  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &none  &none  &none  &none   &none    &none         &none         &none         &none         &none         &none
+                     &none  &none   &none    &none         &none         &none
             >;
         };
     };
