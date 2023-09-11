@@ -19,6 +19,11 @@
             bindings = <&mo 8>;
             key-positions = <37 40 25>;
         };
+
+        debugging {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
+        };
     };
 
     behaviors {
