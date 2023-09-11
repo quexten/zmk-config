@@ -27,7 +27,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -37,12 +37,12 @@
             bindings = <
 &none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD  &kp P       &kp Y        &kp F    &kp G  &kp C      &kp R  &kp L  &none
 &none  &kp A             &kp O      &kp E       &kp U       &kp I        &kp D    &kp H  &kp T      &kp N  &kp S  &none
-&none  &kp LEFT_ALT      &kp Q      &kp J       &kp K       &kp X        &kp B    &kp M  &kp W      &kp V  &kp Z  &none
+&none  &mo 4             &kp Q      &kp J       &kp K       &kp X        &kp B    &kp M  &kp W      &kp V  &kp Z  &none
                                     &mo 2       &kp LSHIFT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
             >;
         };
 
-        lower_layer {
+        navigation {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -57,7 +57,7 @@
             >;
         };
 
-        raise_layer {
+        specials {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -65,19 +65,46 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL       &kp AT     &kp HASH              &kp DLLR               &kp PRCNT       &kp CARET  &kp AMPS        &kp STAR         &kp LPAR   &kp RPAR  &none
+&none  &kp EXCL       &kp AT     &kp HASH              &kp DLLR               &kp PRCNT       &kp CARET  &kp AMPS        &kp STAR         &none      &none     &none
 &none  &kp TILDE      &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp BSLH  &none
 &none  &kp SEMICOLON  &kp COLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE       &kp UNDER  &kp PLUS        &kp SEMI         &kp PIPE   &none     &none
                                  &trans                &trans                 &trans          &trans     &trans          &trans
             >;
         };
 
-        layer_5 {
+        management {
             bindings = <
 &trans  &trans   &trans       &trans   &kp LS(F5)      &trans    &bt BT_CLR    &trans        &trans        &trans        &trans        &trans
 &trans  &kp F11  &kp LS(F11)  &kp F10  &kp F5          &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &trans  &trans   &trans       &trans   &kp LS(LC(F5))  &trans    &trans        &tog 3        &trans        &trans        &trans        &trans
                               &trans   &trans          &trans    &trans        &trans        &trans
+            >;
+        };
+
+        numbers {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp COMMA   &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                        &trans  &trans  &trans    &trans      &trans        &trans
+            >;
+        };
+
+        gaming_base {
+            bindings = <
+&trans  &trans     &kp Q  &kp W   &kp E  &kp R        &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &none      &none   &none   &trans  &trans  &trans
+                          &trans  &mo 6  &kp SPACE    &kp ENTER  &trans  &trans
+            >;
+        };
+
+        gaming_upper {
+            bindings = <
+&trans  &kp LC(F1)  &kp NUMBER_1  &kp N2  &kp NUMBER_3  &kp N4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(F2)  &trans        &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans        &trans  &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans  &trans        &trans    &trans  &trans  &trans
             >;
         };
     };
