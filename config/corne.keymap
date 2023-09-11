@@ -92,10 +92,10 @@
 
         gaming_base {
             bindings = <
-&trans  &trans     &kp Q  &kp W   &kp E  &kp R        &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp A  &kp S   &kp D  &kp F        &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL  &kp Z  &kp X   &kp C  &kp V        &none      &none   &none   &trans  &trans  &trans
-                          &trans  &mo 6  &kp SPACE    &kp ENTER  &trans  &trans
+&none  &none      &kp Q  &kp W  &kp E  &kp R        &none      &none  &none  &none  &none  &none
+&none  &kp LSHFT  &kp A  &kp S  &kp D  &kp F        &none      &none  &none  &none  &none  &none
+&none  &kp LCTRL  &kp Z  &kp X  &kp C  &kp V        &none      &none  &none  &none  &none  &none
+                         &none  &mo 6  &kp SPACE    &kp ENTER  &none  &none
             >;
         };
 
@@ -110,10 +110,10 @@
 
         management {
             bindings = <
-&trans  &trans  &trans  &trans  &none   &trans    &bt BT_CLR    &trans        &trans        &trans        &trans        &trans
-&trans  &none   &none   &none   &none   &trans    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans  &trans  &trans  &trans  &none   &trans    &trans        &none         &trans        &trans        &trans        &trans
-                        &trans  &trans  &trans    &trans        &trans        &trans
+&none  &none   &none  &none  &none  &none    &bt BT_CLR    &none         &none         &none         &none         &none
+&none  &tog 5  &none  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &none   &none  &none  &none  &none    &none         &none         &none         &none         &none         &none
+                      &none  &none  &none    &none         &none         &none
             >;
         };
     };
