@@ -57,10 +57,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp COMMA       &kp PERIOD   &kp P             &kp Y        &kp F    &kp G             &kp C               &kp R           &kp L       &none
-&none  &mt A LWIN        &mt O LEFT_ALT  &mt E LCTRL  &mt U LEFT_SHIFT  &kp I        &kp D    &mt H LEFT_SHIFT  &mt T LEFT_CONTROL  &mt N LEFT_ALT  &mt S LWIN  &none
-&none  &mo 5             &kp Q           &kp J        &kp K             &kp X        &kp B    &kp M             &kp W               &kp V           &kp Z       &none
-                                         &mo 4        &kp LSHIFT        &kp SPACE    &kp RET  &mo 1             &kp LCTRL
+&none  &kp SINGLE_QUOTE  &kp COMMA       &kp PERIOD   &kp P                 &kp Y        &kp F    &kp G        &kp C        &kp R       &kp L           &none
+&none  &mt LWIN A        &mt LEFT_ALT O  &mt LCTRL E  &mt LEFT_SHIFT LS(U)  &kp I        &kp D    &mt LSHFT H  &mt LCTRL T  &mt LALT N  &mt LEFT_GUI S  &none
+&none  &mo 5             &kp Q           &kp J        &kp K                 &kp X        &kp B    &kp M        &kp W        &kp V       &kp Z           &none
+                                         &mo 4        &kp LSHIFT            &kp SPACE    &kp RET  &mo 1        &kp LCTRL
             >;
         };
 
