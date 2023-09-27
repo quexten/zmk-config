@@ -10,6 +10,12 @@
 
 / {
     macros {
+        panethesis_with_semicolon: panethesis_with_semicolon {
+            compatible = "zmk,behavior-macro";
+            label = "PANETHESIS_WITH_SEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp SEMI>;
+        };
     };
 
     combos {
@@ -51,10 +57,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp COMMA    &kp PERIOD      &kp P           &kp Y        &kp F    &kp G           &kp C           &kp R        &kp L             &none
-&none  &mt A LSHIFT      &mt O LCTRL  &mt E LEFT_WIN  &mt U LEFT_ALT  &kp I        &kp D    &mt H LEFT_ALT  &mt T LEFT_WIN  &mt N LCTRL  &mt S LEFT_SHIFT  &none
-&none  &mo 5             &kp Q        &kp J           &kp K           &kp X        &kp B    &kp M           &kp W           &kp V        &kp Z             &none
-                                      &mo 4           &kp LSHIFT      &kp SPACE    &kp RET  &mo 1           &kp LCTRL
+&none  &kp SINGLE_QUOTE  &kp COMMA       &kp PERIOD   &kp P             &kp Y        &kp F    &kp G             &kp C               &kp R           &kp L       &none
+&none  &mt A LWIN        &mt O LEFT_ALT  &mt E LCTRL  &mt U LEFT_SHIFT  &kp I        &kp D    &mt H LEFT_SHIFT  &mt T LEFT_CONTROL  &mt N LEFT_ALT  &mt S LWIN  &none
+&none  &mo 5             &kp Q           &kp J        &kp K             &kp X        &kp B    &kp M             &kp W               &kp V           &kp Z       &none
+                                         &mo 4        &kp LSHIFT        &kp SPACE    &kp RET  &mo 1             &kp LCTRL
             >;
         };
 
@@ -66,10 +72,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none    &none      &none         &none         &none    &none          &none       &none     &none         &none      &none
-&none  &kp TAB  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none    &kp BACKSPACE  &kp LEFT    &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none
-&none  &kp ESC  &none      &none         &mo 2         &none    &none          &kp DELETE  &none     &none         &none      &none
-                           &none         &trans        &none    &none          &trans      &none
+&none  &none             &none         &none             &none       &none    &none          &none       &none     &none         &none      &none
+&none  &mt TAB LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT  &none    &kp BACKSPACE  &kp LEFT    &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none
+&none  &kp ESC           &none         &none             &mo 2       &none    &none          &kp DELETE  &none     &none         &none      &none
+                                       &none             &trans      &none    &none          &trans      &none
             >;
         };
 
@@ -99,10 +105,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL              &kp AT           &kp HASH                       &kp DLLR                        &kp PRCNT       &kp CARET  &kp AMPS                 &kp STAR                  &none            &none                &none
-&none  &mt TILDE LEFT_SHIFT  &mt SLASH LCTRL  &mt LEFT_PARENTHESIS LEFT_WIN  &mt RIGHT_PARENTHESIS LEFT_ALT  &kp QUESTION    &kp MINUS  &mt LEFT_BRACE LEFT_ALT  &mt RIGHT_BRACE LEFT_WIN  &mt EQUAL LCTRL  &mt BSLH LEFT_SHIFT  &none
-&none  &kp SEMICOLON         &kp COLON        &kp LEFT_BRACKET               &kp RIGHT_BRACKET               &kp GRAVE       &kp UNDER  &kp PLUS                 &kp SEMI                  &kp PIPE         &none                &none
-                                              &trans                         &trans                          &trans          &trans     &mo 8                    &trans
+&none  &kp EXCL        &kp AT              &kp HASH                           &kp DLLR                      &kp PRCNT       &kp CARET  &kp AMPS                   &kp STAR                      &panethesis_with_semicolon  &none          &none
+&none  &mt TILDE LWIN  &mt SLASH LEFT_ALT  &mt LEFT_PARENTHESIS LEFT_CONTROL  &mt RIGHT_PARENTHESIS LSHIFT  &kp QUESTION    &kp MINUS  &mt LEFT_BRACE LEFT_SHIFT  &mt RIGHT_BRACE LEFT_CONTROL  &mt EQUAL LEFT_ALT          &mt BSLH LWIN  &none
+&none  &kp SEMICOLON   &kp COLON           &kp LEFT_BRACKET                   &kp RIGHT_BRACKET             &kp GRAVE       &kp UNDER  &kp PLUS                   &kp SEMI                      &kp PIPE                    &none          &none
+                                           &trans                             &trans                        &trans          &trans     &mo 8                      &trans
             >;
         };
 
