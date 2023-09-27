@@ -23,11 +23,21 @@
 
         management {
             bindings = <&mo 8>;
-            key-positions = <37 36 40>;
+            key-positions = <37 40 25 34>;
         };
     };
 
     behaviors {
+        tap_time: tap_time {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_TIME";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -41,10 +51,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD  &kp P       &kp Y        &kp F    &kp G  &kp C      &kp R  &kp L  &none
-&none  &kp A             &kp O      &kp E       &kp U       &kp I        &kp D    &kp H  &kp T      &kp N  &kp S  &none
-&none  &mo 5             &kp Q      &kp J       &kp K       &kp X        &kp B    &kp M  &kp W      &kp V  &kp Z  &none
-                                    &mo 4       &kp LSHIFT  &kp SPACE    &kp RET  &mo 1  &kp LCTRL
+&none  &kp SINGLE_QUOTE  &kp COMMA    &kp PERIOD      &kp P           &kp Y        &kp F    &kp G           &kp C           &kp R        &kp L             &none
+&none  &mt A LSHIFT      &mt O LCTRL  &mt E LEFT_WIN  &mt U LEFT_ALT  &kp I        &kp D    &mt H LEFT_ALT  &mt T LEFT_WIN  &mt N LCTRL  &mt S LEFT_SHIFT  &none
+&none  &mo 5             &kp Q        &kp J           &kp K           &kp X        &kp B    &kp M           &kp W           &kp V        &kp Z             &none
+                                      &mo 4           &kp LSHIFT      &kp SPACE    &kp RET  &mo 1           &kp LCTRL
             >;
         };
 
@@ -89,19 +99,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL       &kp AT     &kp HASH              &kp DLLR               &kp PRCNT       &kp CARET  &kp AMPS        &kp STAR         &none      &none     &none
-&none  &kp TILDE      &kp SLASH  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION    &kp MINUS  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp EQUAL  &kp BSLH  &none
-&none  &kp SEMICOLON  &kp COLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GRAVE       &kp UNDER  &kp PLUS        &kp SEMI         &kp PIPE   &none     &none
-                                 &trans                &trans                 &trans          &trans     &mo 8           &trans
+&none  &kp EXCL              &kp AT           &kp HASH                       &kp DLLR                        &kp PRCNT       &kp CARET  &kp AMPS                 &kp STAR                  &none            &none                &none
+&none  &mt TILDE LEFT_SHIFT  &mt SLASH LCTRL  &mt LEFT_PARENTHESIS LEFT_WIN  &mt RIGHT_PARENTHESIS LEFT_ALT  &kp QUESTION    &kp MINUS  &mt LEFT_BRACE LEFT_ALT  &mt RIGHT_BRACE LEFT_WIN  &mt EQUAL LCTRL  &mt BSLH LEFT_SHIFT  &none
+&none  &kp SEMICOLON         &kp COLON        &kp LEFT_BRACKET               &kp RIGHT_BRACKET               &kp GRAVE       &kp UNDER  &kp PLUS                 &kp SEMI                  &kp PIPE         &none                &none
+                                              &trans                         &trans                          &trans          &trans     &mo 8                    &trans
             >;
         };
 
         numbers {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp COMMA   &kp N7        &kp N8        &kp N9        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp N0      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp PERIOD  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                        &trans  &trans  &trans    &trans      &trans        &trans
+&trans  &trans  &trans     &trans        &trans        &trans    &kp COMMA   &kp N7                 &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &trans    &kp N0      &kp NUMBER_4           &kp N5        &kp NUMBER_6  &kp N0  &trans
+&trans  &trans  &trans     &trans        &trans        &trans    &kp PERIOD  &tap_time NUMBER_1 F1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                           &trans        &trans        &trans    &trans      &trans                 &trans
             >;
         };
 
