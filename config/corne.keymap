@@ -76,10 +76,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp SINGLE_QUOTE                  &kp COMMA       &kp PERIOD   &kp P                               &kp Y                           &kp F    &kp G                       &kp C        &kp R       &kp L           &none
-&none  &mt LWIN A                        &mt LEFT_ALT O  &mt LCTRL E  &mt LEFT_SHIFT U                    &kp I                           &kp D    &mt LSHFT H                 &mt LCTRL T  &mt LALT N  &mt LEFT_GUI S  &none
-&none  &layer_tap_pref_hold 5 RIGHT_ALT  &kp Q           &kp J        &kp K                               &kp X                           &kp B    &kp M                       &kp W        &kp V       &kp Z           &none
-                                                         &mo 4        &tap_hold_pref_hold LEFT_SHIFT TAB  &layer_tap_pref_hold 4 SPACE    &kp RET  &layer_tap_pref_hold 1 ESC  &none
+&none  &kp SINGLE_QUOTE                  &kp COMMA       &kp PERIOD   &kp P                               &kp Y        &kp F    &kp G                       &kp C        &kp R       &kp L           &none
+&none  &mt LWIN A                        &mt LEFT_ALT O  &mt LCTRL E  &mt LEFT_SHIFT U                    &kp I        &kp D    &mt LSHFT H                 &mt LCTRL T  &mt LALT N  &mt LEFT_GUI S  &none
+&none  &layer_tap_pref_hold 5 RIGHT_ALT  &kp Q           &kp J        &kp K                               &kp X        &kp B    &kp M                       &kp W        &kp V       &kp Z           &none
+                                                         &mo 4        &tap_hold_pref_hold LEFT_SHIFT TAB  &kp SPACE    &kp RET  &layer_tap_pref_hold 1 ESC  &none
             >;
         };
 
